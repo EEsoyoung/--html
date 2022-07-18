@@ -4,66 +4,34 @@
 <title>WEB-JavaScript</title>
 <meta charset="utf-8">
 <link rel="stylesheet" href="style.css">
-<script>
-  function LinksSetColor(color){
-    var alist = document.querySelectorAll('a');
-      var i = 0;
-      while(i < alist.length){
-          alist[i].style.color = color;
-          i = i + 1;
-      }
-  }
-  function BodysetColor(color){
-    document.querySelector('body').style.color = color;
-  }
-  function BodySetBackgroundColor(color){
-    document.querySelector('body').style.backgroundColor = color;
-  }
-  function nightDayHandler(self){
-    var taget = document.querySelector('body');
-    if(self.value === 'night') {
-      BodySetBackgroundColor('black');
-      BodysetColor('white');
-    self.value = 'day';
-
-    LinksSetColor('powderblue');
-
-    } else {
-      BodySetBackgroundColor('white');
-      BodysetColor('black');
-    self.value = 'night';
-
-    LinksSetColor('blue');
-  }
-}
-</script>
+<script src="colors.js"></script>
 </head>
-<body>
-  <h1><a href="index.html">WEB</a></h1>
-  <!-- <input type="button" value="night" onclick="
-    document.querySelector('body').style.backgroundColor = 'black';
-    document.querySelector('body').style.color = 'white';
+  <body>
+    <h1><a href="index.html">WEB</a></h1>
+    <!-- <input type="button" value="night" onclick="
+      document.querySelector('body').style.backgroundColor = 'black';
+      document.querySelector('body').style.color = 'white';
+    ">
+    <input type="button" value="day"onclick="
+    document.querySelector('body').style.backgroundColor = 'white';
+    document.querySelector('body').style.color = 'black';
+    "> -->
+  <input type="button" value="night" onclick="
+    nightDayHandler(this);
   ">
-  <input type="button" value="day"onclick="
-  document.querySelector('body').style.backgroundColor = 'white';
-  document.querySelector('body').style.color = 'black';
-  "> -->
-<input type="button" value="night" onclick="
-  nightDayHandler(this);
-">
-  <div id="grid">
-<ul>
-  <li><a href="web.html">HTML</a></li>
-  <li><a href="web2.html">CSS</a></li>
-  <li><a href="web3.html">JavaScript</a></li>
-</ul>
-<div id="article">
-<h2>JavaScript</h2>
-<p>
-  JavaScript (JS) is a lightweight,interpreted, or just-in-time compiled programming language with first-class functions. While it is most well-known as the scripting language for Web pages, many non-browser environments also use it, such as Node.js, Apache CouchDB and Adobe Acrobat.<br>
-   JavaScript is a prototype-based, multi-paradigm, single-threaded, dynamic language, supporting object-oriented, imperative, and declarative (e.g. functional programming) styles. Read more about JavaScript.
-</p>
-</div>
-</div>
-</body>
+    <div id="grid">
+      <ul>
+        <li><a href="web.html">HTML</a></li>
+        <li><a href="web2.html">CSS</a></li>
+        <li><a href="web3.html">JavaScript</a></li>
+      </ul>
+  <div id="article">
+  <h2>JavaScript</h2>
+  <p>
+    JavaScript (JS) is a lightweight,interpreted, or just-in-time compiled programming language with first-class functions. While it is most well-known as the scripting language for Web pages, many non-browser environments also use it, such as Node.js, Apache CouchDB and Adobe Acrobat.<br>
+    JavaScript is a prototype-based, multi-paradigm, single-threaded, dynamic language, supporting object-oriented, imperative, and declarative (e.g. functional programming) styles. Read more about JavaScript.
+  </p>
+  </div>
+  </div>
+  </body>
 </html>
